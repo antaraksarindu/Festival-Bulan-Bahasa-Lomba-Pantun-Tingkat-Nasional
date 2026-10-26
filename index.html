@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#073b91">
+<meta name="description" content="Festival Bulan Bahasa — Lomba Pantun Tingkat Nasional. Bersajak dalam Kata, Berbudaya dalam Karya.">
+<title>Festival Bulan Bahasa | Lomba Pantun Nasional</title>
+<style>
+:root{--navy:#082c72;--blue:#0757bd;--sky:#eaf5ff;--gold:#ffd34e;--red:#e52e37;--ink:#15223a;--muted:#64748b;--white:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#f4f8ff;line-height:1.6}
+a{color:inherit}
+.container{width:min(1120px,calc(100% - 36px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(7,44,114,.96);backdrop-filter:blur(12px);color:white;border-bottom:1px solid rgba(255,255,255,.16)}
+.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-weight:900;letter-spacing:.02em;display:flex;align-items:center;gap:10px}
+.brand-mark{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:var(--gold);color:var(--navy);font-size:21px}
+nav{display:flex;align-items:center;gap:24px;font-size:14px}
+nav a{text-decoration:none;opacity:.9}
+nav a:hover{opacity:1;color:var(--gold)}
+.nav-cta,.button{display:inline-flex;justify-content:center;align-items:center;text-decoration:none;font-weight:800;border-radius:12px;padding:12px 18px;transition:transform .2s,box-shadow .2s}
+.nav-cta{background:var(--gold);color:var(--navy);white-space:nowrap}
+.button:hover,.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 20px #061f5030}
+.hero{overflow:hidden;position:relative;color:white;background:radial-gradient(circle at 85% 15%,#ffbf55 0,transparent 25%),linear-gradient(130deg,#062968 0%,#0757bd 57%,#188bd2 100%);padding:70px 0 76px}
+.hero:before,.hero:after{content:"";position:absolute;border:1px solid #ffffff18;border-radius:50%;width:460px;height:460px;right:-150px;bottom:-260px}
+.hero:after{width:320px;height:320px;right:-80px;bottom:-190px}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:50px}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;background:#ffffff18;border:1px solid #ffffff40;padding:7px 12px;border-radius:99px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+h1{font-size:clamp(2.6rem,6vw,5rem);line-height:.99;letter-spacing:-.055em;margin:22px 0 18px;font-weight:950}
+h1 span{display:block;color:var(--gold)}
+.hero p{font-size:clamp(1rem,2vw,1.18rem);max-width:550px;color:#e5f1ff;margin:0 0 26px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.button-primary{background:var(--gold);color:var(--navy)}
+.button-outline{border:1px solid #ffffff80;color:white;background:#ffffff0c}
+.hero-note{font-size:12px!important;color:#c8e2ff!important;margin-top:18px!important}
+.poster-wrap{position:relative;max-width:370px;width:100%;justify-self:center}
+.poster-wrap:before{content:"";position:absolute;inset:18px -12px -12px 18px;background:var(--gold);border-radius:20px;transform:rotate(3deg)}
+.poster{position:relative;display:block;width:100%;height:auto;border-radius:16px;box-shadow:0 28px 60px #00153b66;border:4px solid #fff}
+.section{padding:76px 0}
+.section-heading{text-align:center;max-width:690px;margin:0 auto 38px}
+.kicker{color:var(--blue);font-weight:900;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+h2{font-size:clamp(1.9rem,4vw,3rem);line-height:1.1;letter-spacing:-.04em;margin:10px 0 12px;color:var(--navy)}
+.section-heading p{margin:0;color:var(--muted)}
+.theme-card{background:white;border:1px solid #dce9fa;border-radius:22px;padding:30px;text-align:center;box-shadow:0 12px 35px #133f7510}
+.quote{font-size:clamp(1.35rem,3vw,2.2rem);font-weight:900;color:var(--navy);line-height:1.25}
+.quote-mark{font-size:42px;color:#f1b900;line-height:.8}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.step{padding:22px;background:white;border:1px solid #dce9fa;border-radius:18px;position:relative}
+.step-number{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:#e2efff;color:var(--blue);font-weight:900;margin-bottom:18px}
+.step time{display:block;color:var(--blue);font-weight:900;font-size:13px;margin-bottom:8px}
+.step h3{font-size:17px;line-height:1.3;margin:0 0 8px;color:var(--navy)}
+.step p{font-size:14px;color:var(--muted);margin:0}
+.requirements{background:#eaf3ff}
+.req-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.req{display:flex;gap:13px;align-items:flex-start;background:white;border:1px solid #dce9fa;border-radius:16px;padding:18px}
+.check{flex:0 0 28px;height:28px;display:grid;place-items:center;border-radius:9px;background:#d9f8e9;color:#08794c;font-weight:900}
+.req p{margin:1px 0 0;font-weight:650}
+.register-panel{background:linear-gradient(120deg,#082c72,#086bc8);border-radius:26px;color:white;padding:clamp(26px,5vw,52px);display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;box-shadow:0 20px 50px #073d851c}
+.register-panel h2{color:white;margin-top:8px}
+.register-panel p{color:#d8eaff;max-width:600px;margin-bottom:0}
+.register-actions{display:flex;flex-direction:column;gap:10px;min-width:190px}
+.register-actions .button{white-space:nowrap}
+.smallprint{font-size:12px;color:#d8eaff;margin-top:14px}
+footer{background:#061d4b;color:#d8e6ff;padding:34px 0}
+.footer-row{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer strong{color:white}
+footer p{margin:4px 0;font-size:13px}
+.footer-links{display:flex;gap:16px;flex-wrap:wrap;font-size:13px}
+.footer-links a{color:#fff;text-decoration:none}
+@media(max-width:800px){nav a:not(.nav-cta){display:none}.hero{padding:48px 0 58px}.hero-grid{grid-template-columns:1fr;gap:38px}.hero-copy{text-align:center}.hero p{margin-left:auto;margin-right:auto}.hero-actions{justify-content:center}.poster-wrap{max-width:310px}.timeline{grid-template-columns:repeat(2,1fr)}.register-panel{grid-template-columns:1fr}.register-actions{flex-direction:row;flex-wrap:wrap}.register-actions .button{flex:1}}
+@media(max-width:520px){.container{width:min(100% - 28px,1120px)}.nav{min-height:62px}.brand{font-size:13px}.brand-mark{width:32px;height:32px}.nav-cta{font-size:12px;padding:10px 12px}.hero{padding:40px 0 52px}h1{font-size:clamp(2.45rem,13vw,3.6rem)}.hero-actions .button{width:100%}.poster-wrap{max-width:270px}.section{padding:55px 0}.theme-card{padding:24px 18px}.timeline,.req-grid{grid-template-columns:1fr}.step{padding:19px}.register-panel{border-radius:20px}.register-actions{flex-direction:column}.register-actions .button{width:100%}.footer-row{align-items:flex-start;flex-direction:column}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#beranda" style="text-decoration:none"><span class="brand-mark">✦</span><span>FESTIVAL BULAN BAHASA</span></a>
+    <nav aria-label="Navigasi utama">
+      <a href="#tentang">Tentang</a><a href="#jadwal">Jadwal</a><a href="#syarat">Persyaratan</a>
+      <a class="nav-cta" href="#daftar">Daftar Lomba ↗</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="hero" id="beranda">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">✦ Karya Cemerlang · Cendekia Gemilang</span>
+      <h1>Festival <span>Bulan Bahasa</span></h1>
+      <p>Lomba Pantun Tingkat Nasional. Saatnya merangkai kata, menjaga budaya, dan menunjukkan kreativitasmu melalui pantun!</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#daftar">Ikuti Lomba →</a>
+        <a class="button button-outline" href="#jadwal">Lihat Jadwal</a>
+      </div>
+      <p class="hero-note">Terbuka untuk umum usia 15–25 tahun · Oktober 2026</p>
+    </div>
+    <div class="poster-wrap"><img class="poster" src="poster-festival.png" alt="Poster resmi Festival Bulan Bahasa — Lomba Pantun Tingkat Nasional"></div>
+  </div>
+</section>
+<section class="section" id="tentang">
+  <div class="container">
+    <div class="section-heading"><span class="kicker">Tentang Festival</span><h2>Rayakan bahasa lewat pantun</h2><p>Asah kreativitas, sampaikan gagasan, dan lestarikan budaya Indonesia melalui karya pantun terbaikmu.</p></div>
+    <div class="theme-card"><div class="quote-mark">“</div><div class="quote">Bersajak dalam Kata,<br>Berbudaya dalam Karya</div><p style="margin:14px 0 0;color:#64748b">Tema Festival Bulan Bahasa</p></div>
+  </div>
+</section>
+<section class="section" id="jadwal" style="background:#fff">
+  <div class="container">
+    <div class="section-heading"><span class="kicker">Catat Tanggalnya</span><h2>Jadwal pelaksanaan</h2><p>Pastikan kamu mengikuti setiap tahapan sesuai jadwal berikut.</p></div>
+    <div class="timeline">
+      <article class="step"><div class="step-number">01</div><time>10–24 Oktober 2026</time><h3>Pendaftaran & Pengumpulan Karya</h3><p>Daftarkan diri dan kirimkan karya pantun sesuai ketentuan.</p></article>
+      <article class="step"><div class="step-number">02</div><time>25–28 Oktober 2026</time><h3>Penilaian Juri</h3><p>Karya peserta akan dinilai oleh dewan juri.</p></article>
+      <article class="step"><div class="step-number">03</div><time>29 Oktober 2026</time><h3>Pengumuman Pemenang</h3><p>Informasi pemenang akan diumumkan oleh panitia.</p></article>
+      <article class="step"><div class="step-number">04</div><time>31 Oktober 2026</time><h3>Penayangan & Penyerahan Hadiah</h3><p>Penayangan karya dan penyerahan hadiah kepada pemenang.</p></article>
+    </div>
+  </div>
+</section>
+<section class="section requirements" id="syarat">
+  <div class="container">
+    <div class="section-heading"><span class="kicker">Sebelum Mendaftar</span><h2>Persyaratan peserta</h2><p>Periksa semua persyaratan berikut sebelum mengirimkan pendaftaran.</p></div>
+    <div class="req-grid">
+      <div class="req"><span class="check">✓</span><p>Terbuka untuk umum dengan rentang usia 15–25 tahun.</p></div>
+      <div class="req"><span class="check">✓</span><p>Membaca buku panduan dengan teliti.</p></div>
+      <div class="req"><span class="check">✓</span><p>Mengisi formulir pendaftaran.</p></div>
+      <div class="req"><span class="check">✓</span><p>Telah melakukan pembayaran pendaftaran.</p></div>
+      <div class="req"><span class="check">✓</span><p>Mengikuti Instagram Rusyidah Club.</p></div>
+    </div>
+  </div>
+</section>
+<section class="section" id="daftar">
+  <div class="container">
+    <div class="register-panel">
+      <div><span class="eyebrow">Waktunya Berkarya</span><h2>Siap jadi bagian dari Festival Bulan Bahasa?</h2><p>Siapkan karya pantun terbaikmu dan ikuti petunjuk pendaftaran dari panitia. Hadiah total jutaan rupiah dan e-sertifikat menantimu sesuai ketentuan lomba.</p><div class="smallprint">Kontak panitia: 085148107107 (Devina) · 085941847076 (Ayin)</div></div>
+      <div class="register-actions">
+        <!-- Ganti # dengan tautan formulir pendaftaran dan buku panduan yang asli -->
+        <a class="button button-primary" href="https://wa.me/6285148107107?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20Festival%20Bulan%20Bahasa" target="_blank" rel="noopener">Hubungi Panitia ↗</a>
+        <a class="button button-outline" href="mailto:rusyidahclubum@gmail.com">Kirim Email ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="container footer-row">
+    <div><strong>Festival Bulan Bahasa</strong><p>Diselenggarakan oleh Rusyidah Club</p><p>© 2026 · Lomba Pantun Tingkat Nasional</p></div>
+    <div class="footer-links"><a href="https://www.instagram.com/rusyidahclub/" target="_blank" rel="noopener">Instagram: @rusyidahclub</a><a href="mailto:rusyidahclubum@gmail.com">rusyidahclubum@gmail.com</a></div>
+  </div>
+</footer>
+</body>
+</html>
